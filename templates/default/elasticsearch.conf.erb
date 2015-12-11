@@ -1,0 +1,14 @@
+module(load="mmnormalize")
+module(load="omelasticsearch")
+
+template(name="test" type="subtree" subtree="$!")
+
+set $!fac = $syslogfacility;
+set $!host = $hostname;
+set $!sev = $syslogseverity;
+set $!time = $timereported;
+set $!tgen = $timegenerated;
+set $!tag = $syslogtag;
+set $!prog = $programname;
+
+action(type="omelasticsearch" server="localhost" template="test")

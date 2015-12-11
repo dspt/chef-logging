@@ -1,0 +1,15 @@
+name             'osl-logging'
+maintainer       'Oregon State University'
+maintainer_email 'chef@osuosl.org'
+license          'apache2'
+description      'Installs/Configures osl-logging'
+long_description 'Installs/Configures osl-logging'
+version          '0.1.0'
+
+depends          'base'
+depends          'elasticsearch'
+depends          'java'
+depends          'simple-kibana'
+depends          'kibana_lwrp'
+
+supports         'centos'
